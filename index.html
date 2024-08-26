@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Email Template</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             margin: 0;
@@ -18,107 +19,170 @@
             max-width: 600px;
             margin: 0 auto;
             background-color: #ffffff;
+            box-shadow: #333333 4px;
+            border-radius: 8px;
+            overflow: hidden;
         }
 
         .header {
-            background-color: #2c3e50;
+            background: linear-gradient(135deg, #6610f2, rgb(223, 26, 223));
             color: #ffffff;
             text-align: center;
-            padding: 30px 0;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header img {
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
         }
 
         .header h1 {
             margin: 0;
-            font-size: 24px;
+            font-size: 30px;
+            font-weight: 700;
         }
 
-        .content {
+        .main-content {
             padding: 20px;
+            text-align: left;
+            color: #ffffff;
+            background: linear-gradient(135deg, #6610f2, #df1adf);
+
         }
 
-        .content h2 {
-            color: #2c3e50;
+        .main-content h2 {
             font-size: 20px;
-            margin-bottom: 10px;
+            
         }
 
-        .content p {
+        .main-content p {
             font-size: 16px;
             line-height: 1.6;
-            color: #333333;
+            
         }
 
-        .button {
+        .additionalContent ul {
+            padding-left: 0;
+        }
+        
+        .additionalContent li {
+            list-style: none;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .additionalContent li i {
+            margin-right: 8px;
+            color: #6610f2;
+        }
+        .tony-img{
+            height: 55px;
+            width: 55px;
+            border-radius: 999px;
+        }
+        .additionalContent{
+            padding: 20px;
+            
+        }
+        .additionalContent h2{
+           color: #df1adf;
+        }
+        .cta-button {
             display: block;
-            width: 200px;
+            width: 100%;
+            max-width: 200px;
             margin: 20px auto;
             text-align: center;
-            background-color: #3498db;
+            background-color: #e84393;
             color: #ffffff;
-            padding: 10px;
+            padding: 12px 0;
             text-decoration: none;
-            border-radius: 5px;
-            transition: 0.5s;
-        }
-
-        .button:hover {
-            transform: scale(1.1);
-            transition: 0.5s;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
         }
 
         .footer {
-            background-color: #2c3e50;
-            color: #ffffff;
+            background-color: #f4f4f4;
+            color: #777777;
             text-align: center;
             padding: 20px;
             font-size: 12px;
         }
 
         .footer a {
-            color: #ffffff;
+            color: #6610f2;
             text-decoration: none;
         }
 
         @media only screen and (max-width: 600px) {
-            .content p {
+            .main-content p {
                 font-size: 14px;
             }
 
-            .button {
-                width: 100%;
+            .cta-button {
+                width: 90%;
+            }
+
+            .header {
+                flex-direction: column;
+            }
+
+            .header img {
+                margin-bottom: 10px;
             }
         }
     </style>
 </head>
-
 <body>
     <div class="container">
         <!-- Header Section -->
         <div class="header">
+            <img src="hermes-logo.png" alt="Hermes Logo">
             <h1>Hermes Investments Services</h1>
         </div>
 
         <!-- Main Content Section -->
-        <div class="content">
-            <h2>Hello first_name 👋🏻,</h2>
-            <p>I read about your Company on LinkedIn</p>
-            <p>Hi first_name,</p>
-            <p>How are things with company_name?</p>
-            <p>Are you looking for Investments or Financing at the moment? We have selected interested funds in our
-                network for your Company.</p>
+        <div class="main-content">
+            <h2>Hi Mark,</h2>
+            <p>I read about your Company on LinkedIn.</p>
+            <p>How are things with Uber Clean?</p>
+            <p>Are you looking for Investments or Financing at the moment? We have selected interested funds in our network for your Company.</p>
             <p>We give a complimentary 30 minutes consultation. Can that be of interest to you?</p>
             <p>If you would like to know more, just reply to this e-mail. I'll be happy to speak to you.</p>
+        </div>
+            <!-- Additional Content -->
+             <div class="additionalContent">
+            <h2>Our Global Reach</h2>
+            <p>Our partners are in: California, Toronto, London, Switzerland, New York, Dubai, Hong Kong, Singapore, and other world-class financial locations.</p>
+            <p>Our practice is focused on a private network of investors and includes Angel Investors, Small Funds, Early Stage & Series A Investors, Family Offices, and High Net-Worth Individuals.</p>
+            
+            <h2>Investment Opportunities</h2>
+            <p>We offer:</p>
+            <ul>
+                <li><i class="fas fa-chart-line"></i>Equity Investments from $500k to $5M</li>
+                <li><i class="fas fa-user-tie"></i>Private Investors</li>
+                <li><i class="fas fa-hand-holding-usd"></i>Lending from $0.5M to $100M</li>
+                <li><i class="fas fa-award"></i>World-Class Certified Fundraiser</li>
+                <li><i class="fas fa-lightbulb"></i>Guidance and Advice</li>
+                <li><i class="fas fa-briefcase"></i>Expertise in AI, Fintech, Cybersecurity, SaaS, BioTech, HealthTech, and Impact Investing</li>
+            </ul>
+            
             <p>Regards,</p>
-            <p>Tony Chauvet.<br>
-                Owner, Hermes Investments Services</p>
+            <img class="tony-img" src="./image.png" alt="Signature Image">
+            <p><strong>Tony Chauvet</strong><br>Owner, Hermes Investments Services</p>
         </div>
 
         <!-- Call to Action Button -->
-        <a href="mailto:tony@hermesinvestments.com" class="button">Reply to this email</a>
+        <a href="mailto:tony@hermesinvestments.com" class="cta-button">Reply to this email</a>
 
         <!-- Footer Section -->
         <div class="footer">
-            <p>Hermes Investments' Team | My LinkedIn</p>
+            <p>Hermes Investments' Team | <a href="#">My LinkedIn</a></p>
             <p>"A Unique Network of Companies and Investors in the world's Business Centers"</p>
             <p>High Park Blvd. Toronto, ON M6R 1M6 Canada</p>
             <p>Certification as Capital Raiser Specialist at the Family Office Club, USA</p>
@@ -126,5 +190,4 @@
         </div>
     </div>
 </body>
-
 </html>
